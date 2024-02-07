@@ -1,3 +1,5 @@
+import {setupIonicReact } from '@ionic/react'
+
 function App() {
   return (
     <div>
