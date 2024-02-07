@@ -1,4 +1,8 @@
-import {setupIonicReact } from '@ionic/react'
+import { setupIonicReact, IonButton } from "@ionic/react";
+
+import "@ionic/react/css/core.css";
+
+setupIonicReact(); //it is set up outside the function so as to be envoked once.
 
 function App() {
   return (
@@ -8,6 +12,7 @@ function App() {
       </header>
       <main>
         <p>Add some content here…</p>
+        <IonButton fill="outline">Suup</IonButton>
       </main>
     </div>
   );
