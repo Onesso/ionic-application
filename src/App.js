@@ -1,10 +1,24 @@
-import { setupIonicReact, IonButton } from "@ionic/react";
+import { setupIonicReact, IonButton, useIonToast } from "@ionic/react";
 
 import "@ionic/react/css/core.css";
 
 setupIonicReact(); //it is set up outside the function so as to be envoked once.
 
-function App() {
+export default function App() {
+
+  const [present] = useIonToast();
+
+  const handleClick = () => {
+
+  present({
+    message: "hello",
+    duration: 1500,
+    position: 'bottom'
+  })
+
+    console.log("Whats up");
+  };
+
   return (
     <div>
       <header>
@@ -12,10 +26,12 @@ function App() {
       </header>
       <main>
         <p>Add some content here…</p>
-        <IonButton fill="outline">Suup</IonButton>
+        <IonButton fill="outline" onClick={handleClick}>
+          Suup
+        </IonButton>
       </main>
     </div>
   );
 }
 
-export default App;
+// export default App;
